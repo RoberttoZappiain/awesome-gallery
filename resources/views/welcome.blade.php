@@ -827,6 +827,7 @@
                 padding: 2rem
             }
         }
+        
     </style>
     @vite(['resources/css/app.css','resources/js/app.js'])
 
@@ -867,8 +868,85 @@
         </div>
     </nav> -->
     <div class="container mx-auto">
-        <p class="max-w-auto tracking-tight text-3xl font-bold leading-relaxed text-gray-600 dark:text-white px-3 my-1">Most views collections tapes 2023</p>
-        <p class="text-gray-500 whitespace-normal dark:text-gray-200 px-3 my-1"> Check te most view tapes from all year.<p>
+
+        
+        
+    <div class="grid gap-4 grid-cols-2 grid-rows-1">
+        <div class="">
+            <p class="max-w-auto tracking-tight text-3xl font-bold leading-relaxed text-gray-600 dark:text-white px-3 my-1">Most views collections tapes 2023</p>
+            <p class="text-gray-500 whitespace-normal dark:text-gray-200 px-3 my-1">Check the most viewed tapes from all year.</p>
+        </div>
+        <div class="flex items-center justify-end">
+            <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" class="text-white bg-gray-800 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-sm px-2 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                <svg class="w-5 h-5 text-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2.133 2.6 5.856 6.9L8 14l4 3 .011-7.5 5.856-6.9a1 1 0 0 0-.804-1.6H2.937a1 1 0 0 0-.804 1.6Z"/>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHelperButton">
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                    <div class="flex items-center h-5">
+                        <input id="helper-checkbox-1" aria-describedby="helper-checkbox-text-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    </div>
+                    <div class="ms-2 text-sm">
+                        <label for="helper-checkbox-1" class="font-medium text-gray-900 dark:text-gray-300">
+                            <div>Permitir Fotos</div>
+                            <p id="helper-checkbox-text-1" class="text-xs font-normal text-gray-500 dark:text-gray-300">Activa o desactiva esta opción para mostrar fotos.</p>
+                        </label>
+                    </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                    <div class="flex items-center h-5">
+                        <input id="helper-checkbox-2" aria-describedby="helper-checkbox-text-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    </div>
+                    <div class="ms-2 text-sm">
+                        <label for="helper-checkbox-2" class="font-medium text-gray-900 dark:text-gray-300">
+                            <div>Permitir Videos</div>
+                            <p id="helper-checkbox-text-2" class="text-xs font-normal text-gray-500 dark:text-gray-300">Activa o desactiva esta opción para mostrar videos.</p>
+                        </label>
+                    </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                    <div class="flex items-center h-5">
+                        <input id="helper-checkbox-3" aria-describedby="helper-checkbox-text-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                    </div>
+                    <div class="ms-2 text-sm">
+                        <label for="helper-checkbox-3" class="font-medium text-gray-900 dark:text-gray-300">
+                            <div>Permitir publicaciones</div>
+                            <p id="helper-checkbox-text-3" class="text-xs font-normal text-gray-500 dark:text-gray-300">Se pueden mostrar publicaciones.</p>
+                        </label>
+                    </div>
+                    </div>
+                </li>
+                </ul>
+                <div class="py-2">
+                    <ul>
+                        <li>
+                            <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                <label class="relative inline-flex items-center w-full cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:translate-x-[-100%] peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600"></div>
+                                    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Filtro Blur</span>
+                                    <p id="helper-checkbox-text-3" class="text-xs font-normal text-gray-500 dark:text-gray-300">Se pueden mostrar publicaciones.</p>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+                
+        
+
+        
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-3">
             <div class="grid gap-4">
                 <div>               
