@@ -827,7 +827,9 @@
                 padding: 2rem
             }
         }
-        
+        .no-blur {
+        filter: none;
+    }
     </style>
     @vite(['resources/css/app.css','resources/js/app.js'])
 
@@ -867,151 +869,120 @@
             </div>
         </div>
     </nav> -->
-    <div class="container mx-auto">
-
-        
-        
-    <div class="grid gap-4 grid-cols-2 grid-rows-1">
-        <div class="">
-            <p class="max-w-auto tracking-tight text-3xl font-bold leading-relaxed text-gray-600 dark:text-white px-3 my-1">Most views collections tapes 2023</p>
-            <p class="text-gray-500 whitespace-normal dark:text-gray-200 px-3 my-1">Check the most viewed tapes from all year.</p>
-        </div>
-        <div class="flex items-center justify-end">
-            <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" class="text-white bg-gray-800 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-sm px-2 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                <svg class="w-5 h-5 text-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2.133 2.6 5.856 6.9L8 14l4 3 .011-7.5 5.856-6.9a1 1 0 0 0-.804-1.6H2.937a1 1 0 0 0-.804 1.6Z"/>
-                </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div id="dropdownHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHelperButton">
-                <li>
-                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                    <div class="flex items-center h-5">
-                        <input id="helper-checkbox-1" aria-describedby="helper-checkbox-text-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                    </div>
-                    <div class="ms-2 text-sm">
-                        <label for="helper-checkbox-1" class="font-medium text-gray-900 dark:text-gray-300">
-                            <div>Permitir Fotos</div>
-                            <p id="helper-checkbox-text-1" class="text-xs font-normal text-gray-500 dark:text-gray-300">Activa o desactiva esta opción para mostrar fotos.</p>
-                        </label>
-                    </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                    <div class="flex items-center h-5">
-                        <input id="helper-checkbox-2" aria-describedby="helper-checkbox-text-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                    </div>
-                    <div class="ms-2 text-sm">
-                        <label for="helper-checkbox-2" class="font-medium text-gray-900 dark:text-gray-300">
-                            <div>Permitir Videos</div>
-                            <p id="helper-checkbox-text-2" class="text-xs font-normal text-gray-500 dark:text-gray-300">Activa o desactiva esta opción para mostrar videos.</p>
-                        </label>
-                    </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                    <div class="flex items-center h-5">
-                        <input id="helper-checkbox-3" aria-describedby="helper-checkbox-text-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                    </div>
-                    <div class="ms-2 text-sm">
-                        <label for="helper-checkbox-3" class="font-medium text-gray-900 dark:text-gray-300">
-                            <div>Permitir publicaciones</div>
-                            <p id="helper-checkbox-text-3" class="text-xs font-normal text-gray-500 dark:text-gray-300">Se pueden mostrar publicaciones.</p>
-                        </label>
-                    </div>
-                    </div>
-                </li>
-                </ul>
-                <div class="py-2">
+    <div class="container mx-auto">       
+        <div class="grid gap-4 grid-cols-2 grid-rows-1">
+            <div class="">
+                <p class="max-w-auto tracking-tight text-3xl font-bold leading-relaxed text-gray-600 dark:text-white px-3 my-1">Most views collections tapes 2023</p>
+                <p class="text-gray-500 whitespace-normal dark:text-gray-200 px-3 my-1">Check the most viewed tapes from all year.</p>
+            </div>
+            <div class="flex items-start justify-end p-8">
+                <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" class="text-white bg-gray-800 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-sm px-2 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                    <svg class="p-0.5 w-5 h-5 text-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2.133 2.6 5.856 6.9L8 14l4 3 .011-7.5 5.856-6.9a1 1 0 0 0-.804-1.6H2.937a1 1 0 0 0-.804 1.6Z"/>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHelperButton">
+                    <li>
+                        <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <div class="flex items-center h-5">
+                            <input id="helper-checkbox-1" aria-describedby="helper-checkbox-text-1" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                        </div>
+                        <div class="ms-2 text-sm">
+                            <label for="helper-checkbox-1" class="font-medium text-gray-900 dark:text-gray-300">
+                                <div>Permitir Fotos</div>
+                                <p id="helper-checkbox-text-1" class="text-xs font-normal text-gray-500 dark:text-gray-300">Activa o desactiva esta opción para mostrar fotos.</p>
+                            </label>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <div class="flex items-center h-5">
+                            <input id="helper-checkbox-2" aria-describedby="helper-checkbox-text-2" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                        </div>
+                        <div class="ms-2 text-sm">
+                            <label for="helper-checkbox-2" class="font-medium text-gray-900 dark:text-gray-300">
+                                <div>Permitir Videos</div>
+                                <p id="helper-checkbox-text-2" class="text-xs font-normal text-gray-500 dark:text-gray-300">Activa o desactiva esta opción para mostrar videos.</p>
+                            </label>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <div class="flex items-center h-5">
+                            <input id="helper-checkbox-3" aria-describedby="helper-checkbox-text-3" type="checkbox" value="" class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                        </div>
+                        <div class="ms-2 text-sm">
+                            <label for="helper-checkbox-3" class="font-medium text-gray-900 dark:text-gray-300">
+                                <div>Permitir publicaciones</div>
+                                <p id="helper-checkbox-text-3" class="text-xs font-normal text-gray-500 dark:text-gray-300">Se pueden mostrar publicaciones.</p>
+                            </label>
+                        </div>
+                        </div>
+                    </li>
+                    </ul>
                     <ul>
                         <li>
-                            <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                                <label class="relative inline-flex items-center w-full cursor-pointer">
+                            <div class="p-3 hover:bg-gray-100">
+                                <label class="relative inline-flex items-center cursor-pointer">
                                     <input type="checkbox" value="" class="sr-only peer">
-                                    <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:translate-x-[-100%] peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600"></div>
-                                    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Filtro Blur</span>
-                                    <p id="helper-checkbox-text-3" class="text-xs font-normal text-gray-500 dark:text-gray-300">Se pueden mostrar publicaciones.</p>
+                                    <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-gray-300 dark:peer-focus:ring-gray-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600"></div>
+                                    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Censored Mode</span>
                                 </label>
+                                <p id="helper-checkbox-text-3" class="text-xs font-normal text-gray-500 dark:text-gray-300">Habilita el filtro blur de los post.</p>
                             </div>
+                        
                         </li>
-                    </ul>                
+                    </ul>               
                 </div>
             </div>
-        </div>
-    </div>
-
-                
-        
-
-        
+        </div>                     
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-3">
             <div class="grid gap-4">
-                <div>               
-                    <figure class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 flex items-center justify-center ">
-                        <a href="#">
-                            <img class="h-auto max-w-full rounded-lg z-10 blur-sm hover:blur-none" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
-                        </a>
-                        <figcaption class="absolute px-1 text-lg text-white hidden md:block bottom-1 text-center w-full">
-                            <div class="flex flex-col space-y-36  justify-center items-center h-full ">
-                                <div class="">
-                                    <svg class="w-12 h-12 text-gray-50 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1.984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L2.506 1.139A1 1 0 0 0 1 1.984Z"/>
-                                    </svg>    
-                                </div>
-                                <div class="grid grid-cols-2 grid-rows-1 bg-gray-900 opacity-50 rounded-lg w-full p-2">
-                                    <div class="flex flex-col justify-center">
-                                        <p class="text-gray-200 tracking-widest font-bold text-base text-left">En: Guanajuato</p>
-                                        <p class="text-gray-50 tracking-tighter font-extralight text-xs text-left">Publicado el: 12/10/2023</p>
-                                    </div>
-                                    <div class="flex items-center justify-end">
-                                        <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ver más</button>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </figcaption>
-                    </figure>
+                <div>
+                    <x-figure src="https://suracapulco.mx/wp-content/uploads/2023/08/Reforma-Jalisco-cinco-jovenes-secuestrados-asesinados-LagosMorelos-150823-pa%CC%81g6-1132x670.jpg" title="En Guanajuato" location="Abril"></x-figure>             
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+                    <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" title="En Michoacan" location="Julio"></x-figure>             
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+                    <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" title="En CDMX" location="Septiembre"></x-figure>             
                 </div>
             </div>
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+                    <x-figure src="https://www.informador.mx/__export/1701746938307/sites/elinformador/img/2023/12/04/jovenes_celaya_crop1701746937371.png_554688468.png" title="En Jalisco" location="Abril"></x-figure>             
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+                    <x-figure src="https://static.independentespanol.com/2022/02/28/18/MichoacanFusilanFuneral.png?width=1200" title="En Sinaloa" location="Enero"></x-figure>             
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-                </div>
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+                    <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" title="En Durango" location="Febrero"></x-figure>             
                 </div>
             </div>
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+                    <x-figure src="https://www.am.com.mx/u/fotografias/fotosnoticias/2023/4/16/480398.jpg" title="En Nuevo Leon" location="Enero"></x-figure>             
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+                    <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" title="En Guanajuato" location="Marzo"></x-figure>             
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+                    <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" title="En Sinaloa" location="Septiembre"></x-figure>             
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" title="En CDMX" location="Octubre"></x-figure>             
+                </div>
+                <div>
+                    <x-figure src="https://www.am.com.mx/u/fotografias/fotosnoticias/2023/4/16/480398.jpg" title="En Jalisco" location="Marzo"></x-figure>             
+                </div>
+                <div>
+                    <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" title="En Michoacan" location="Agosto"></x-figure>             
                 </div>
             </div>
         </div>
