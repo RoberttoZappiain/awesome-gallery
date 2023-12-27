@@ -1,4 +1,4 @@
-<figure class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 flex flex-col items-center justify-center blur-sm hover:blur-none">
+<figure class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 flex flex-col items-center justify-center">
     <a href="#" class="relative">
         <img class="h-auto max-w-full rounded-lg transition-all duration-300 rounded-lg " src="{{ $src }}" alt="">
         <div class="absolute inset-0 flex items-center justify-center">
