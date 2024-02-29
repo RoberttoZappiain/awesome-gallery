@@ -214,10 +214,10 @@
                         <x-figure src="https://suracapulco.mx/wp-content/uploads/2023/08/Reforma-Jalisco-cinco-jovenes-secuestrados-asesinados-LagosMorelos-150823-pa%CC%81g6-1132x670.jpg" title="En Guanajuato" location="Abril"></x-figure>             
                     </div>
                     <div>
-                        <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" title="En Michoacan" location="Julio"></x-figure>             
+                        <x-figure src="https://www.am.com.mx/u/fotografias/fotosnoticias/2023/4/16/480398.jpg" title="En Michoacan" location="Julio"></x-figure>             
                     </div>
                     <div>
-                        <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" title="En CDMX" location="Septiembre"></x-figure>             
+                        <x-figure src="https://www.informador.mx/__export/1701746938307/sites/elinformador/img/2023/12/04/jovenes_celaya_crop1701746937371.png_554688468.png" title="En CDMX" location="Septiembre"></x-figure>             
                     </div>
                 </div>
                 <div class="grid gap-4">
@@ -228,7 +228,7 @@
                         <x-figure src="https://static.independentespanol.com/2022/02/28/18/MichoacanFusilanFuneral.png?width=1200" title="En Sinaloa" location="Enero"></x-figure>             
                     </div>
                     <div>
-                        <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" title="En Durango" location="Febrero"></x-figure>             
+                        <x-figure src="https://www.am.com.mx/u/fotografias/fotosnoticias/2023/4/16/480398.jpg" title="En Durango" location="Febrero"></x-figure>             
                     </div>
                 </div>
                 <div class="grid gap-4">
@@ -236,15 +236,15 @@
                         <x-figure src="https://www.am.com.mx/u/fotografias/fotosnoticias/2023/4/16/480398.jpg" title="En Nuevo Leon" location="Enero"></x-figure>             
                     </div>
                     <div>
-                        <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" title="En Guanajuato" location="Marzo"></x-figure>             
+                        <x-figure src="https://www.informador.mx/__export/1701746938307/sites/elinformador/img/2023/12/04/jovenes_celaya_crop1701746937371.png_554688468.png" title="En Guanajuato" location="Marzo"></x-figure>             
                     </div>
                     <div>
-                        <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" title="En Sinaloa" location="Septiembre"></x-figure>             
+                        <x-figure src="https://www.am.com.mx/u/fotografias/fotosnoticias/2023/4/16/480398.jpg" title="En Sinaloa" location="Septiembre"></x-figure>             
                     </div>
                 </div>
                 <div class="grid gap-4">
                     <div>
-                        <x-figure src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" title="En CDMX" location="Octubre"></x-figure>             
+                        <x-figure src="https://static.independentespanol.com/2022/02/28/18/MichoacanFusilanFuneral.png?width=1200" title="En CDMX" location="Octubre"></x-figure>             
                     </div>
                     <div>
                         <x-figure src="https://www.am.com.mx/u/fotografias/fotosnoticias/2023/4/16/480398.jpg" title="En Jalisco" location="Marzo"></x-figure>             
