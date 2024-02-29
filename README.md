@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://drive.google.com/file/d/19QxjOSXkwZ5WebxcJg6nFopt0IC36UuA/preview" width="640" height="480" allow="autoplay" alt="app preview"></a></p>
+<iframe src="https://drive.google.com/file/d/19QxjOSXkwZ5WebxcJg6nFopt0IC36UuA/preview" width="640" height="480" allow="autoplay"></iframe>
 
 ### Premium Partners
 
