@@ -15,7 +15,7 @@
   
     #map {
         position: relative;
-      height: 120%;
+      height: 130%;
       width: 100%;    }
 
     /*
@@ -29,24 +29,35 @@
     }
 
     #contentAboveMap {
-      position: absolute;
-      top: 11%; /* Ajusta la posición vertical */
-      left: 0px; /* Ajusta la posición horizontal */
-      background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-      backdrop-filter: blur(1px);
-      padding: 10px;
-      border-radius: 1px;
-      z-index: 1000; /* Asegura que esté encima del mapa */
-      width: 100%;
-    }
+    position: absolute;
+    top: 5%; /* Centra verticalmente */
+    left: 0%; /* Centra horizontalmente */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    backdrop-filter: blur(3px);
+    padding: 5px;
+    border-radius: 25px;
+    z-index: 1000; /* Asegura que esté encima del mapa */
+    width: 95%;
+    border: 3px solid gray;
+    margin: 25px;
+    
+  }
+
+
   </style>
   <body>
-  <nav class="bg-white border-gray-200 dark:bg-gray-900 ">
-        <div class="flex flex-wrap items-center justify-between p-4 bg-black">
-            <a href="https://flowbite.com/" class="flex items-center space-x-1 rtl:space-x-reverse">
-                <img src="https://svgsilh.com/svg/1691149.svg" class="h-8 bg-white rounded-lg" alt="Flowbite Logo" />
-                <span class="self-center text-2xl tracking-tight whitespace-nowrap text-white">Blog de Alto Impacto Nacional</span>
-            </a>
+  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="flex flex-wrap items-center justify-between bg-black p-3">
+            <div class="px-4 ">
+              <a href="https://flowbite.com/" class="flex items-center space-x-1 rtl:space-x-reverse">
+                <div class="bg-gradient-to-r from-red-50 to-pink-50 rounded-lg">
+                  <svg class="w-6 h-6 text-red-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 11.5a.5.5 0 0 0-1 0 1.4 1.4 0 0 1-1.4 1 1.5 1.5 0 0 1-1.4-1 .5.5 0 0 0-1 0 1.5 1.5 0 0 1-2.7 0v-2h2.2a2.6 2.6 0 0 0 2.7-2.7 2.7 2.7 0 0 0-2.7-2.6h-.5l-.1-.3a2.6 2.6 0 0 0-3.8-1.4l-.3.1-.3-.1a2.6 2.6 0 0 0-2.8 0c-.4.4-.8.8-1 1.4V4h-.6a2.7 2.7 0 0 0-2.7 2.6 2.6 2.6 0 0 0 2.7 2.7h2.3v2a1.3 1.3 0 0 1-1.3 1 1.6 1.6 0 0 1-1.5-1 .5.5 0 0 0-1 0 1.5 1.5 0 0 1-1.4 1 1.4 1.4 0 0 1-1.4-1 .5.5 0 0 0-.5-.4.5.5 0 0 0-.5.6v.4a10 10 0 1 0 20 0v-.5ZM8.3 15.7a1 1 0 1 1 2.1 0 1 1 0 0 1-2 0Zm1.6 3.7a2.1 2.1 0 0 1 4.2 0H10Zm4.7-2.7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+                  </svg>
+                </div>            
+                <span class="self-center text-2xl font-bold tracking-wide whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-red-800 to-pink-50">Blog de Alto Impacto Nacional</span>
+              </a>
+            </div>
             <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -56,21 +67,67 @@
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-default">
                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="#" class="block py-2 px-3 text-gray-50 bg-gray-700 rounded md:bg-transparent md:text-gray-50 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Novedades</a>
+                        <a href="#" class="block py-2 px-3 tracking-wider  text-pink-50 bg-gray-700 rounded md:bg-transparent md:text-gray-50 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Actualidad</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 px-3 text-gray-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-50 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Mapa</a>
+                        <a href="#" class="block py-2 px-3 tracking-wider text-pink-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-50 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent underline decoration-red-500 underline-offset-8">Mapa</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 px-3 text-gray-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-50 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+                        <a href="#" class="block py-2 px-3 tracking-wider text-pink-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-50 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
                     </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-gray-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-50 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Cuenta</a>
-                    </li>
+                    
                 </ul>                
             </div>
             <div class="flex md:order-2">                    
-                <form class="flex items-center p-4">   
+                
+                <div class="p-2">
+                  <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName" class="flex items-center text-sm pe-1 font-medium bg-gray-50 rounded-full hover:text-pink-800 dark:hover:text-blue-500 md:me-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white" type="button">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-8 h-8 me-2 rounded-full p-2" src="https://cdn-icons-png.freepik.com/256/1077/1077114.png" alt="user photo">
+                      username
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div id="dropdownAvatarName" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                      <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                        <div class="font-medium ">Pro User</div>
+                        <div class="truncate">name@flowbite.com</div>
+                      </div>
+                      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                        </li>
+                      </ul>
+                      <div class="py-2">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                      </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div id="map">        
+    </div> 
+
+        <div id="contentAboveMap" class="container-fluid mx-auto">       
+            <div class="grid gap-4 grid-cols-2 grid-rows-1">
+                <div class="">
+                    <p class="max-w-auto tracking-tight text-3xl font-bold leading-relaxed text-gray-50 dark:text-white px-3 my-1">Most views collections tapes 2023</p>
+                    <p class="text-gray-50 whitespace-normal dark:text-gray-50 px-3 my-1">Check the most viewed tapes from all year.</p>
+                </div>
+                <div class="flex items-start justify-end p-8">
+                <form class="flex items-center justify-center px-4">   
                     <label for="voice-search" class="sr-only">Search</label>
                     <div class="relative w-96">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -81,31 +138,12 @@
                         </div>
                         <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Encuentra notas, videos e imagenes..." required>
                         <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <button type="submit" class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                        </svg>Search
-                    </button>
+                        </svg>
+                        </button>
+                    </div>                    
                 </form>
-            </div>
-        </div>
-    </nav>
-    <div id="map">
-        
-    </div> 
-
-        <div id="contentAboveMap" class="container-fluid mx-auto">       
-            <div class="grid gap-4 grid-cols-2 grid-rows-1">
-                <div class="">
-                    <p class="max-w-auto tracking-tight text-3xl font-bold leading-relaxed text-gray-50 dark:text-white px-3 my-1">Most views collections tapes 2023</p>
-                    <p class="text-gray-50 whitespace-normal dark:text-gray-50 px-3 my-1">Check the most viewed tapes from all year.</p>
-                </div>
-                <div class="flex items-start justify-end p-8">
                     <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" class="text-white bg-gray-800 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-sm px-2 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                         <svg class="p-0.5 w-5 h-5 text-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2.133 2.6 5.856 6.9L8 14l4 3 .011-7.5 5.856-6.9a1 1 0 0 0-.804-1.6H2.937a1 1 0 0 0-.804 1.6Z"/>
